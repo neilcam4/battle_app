@@ -16,12 +16,12 @@ let(:marley) { Player.new("Marley") }
     end
   end
 
-  describe '#attack' do
-    it 'damages the opponent' do
-      expect(marley).to receive (:reduce_health)
-      bob.attack(marley)
-    end
-  end
+  # describe '#attack' do
+  #   it 'damages the opponent' do
+  #     expect(marley).to receive (:reduce_health)
+  #     bob.attack(marley)
+  #   end
+  # end
 
   describe '#reduce_health' do
     it 'reduces health points by 10' do

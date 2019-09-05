@@ -6,9 +6,9 @@ class Player
     @name = name
   end
 
-  def attack(opponent)
-    opponent.reduce_health
-  end
+  # def attack(opponent)
+  #   opponent.reduce_health
+  # end
 
   def reduce_health
     @hit_points -= 10

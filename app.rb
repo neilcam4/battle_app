@@ -25,7 +25,8 @@ class Battle < Sinatra::Base
     @player2 = $player2
     # @player_1_name = $player1.name
     # @player_2_name = $player2.name
-    $player1.attack($player2)
+    # $player1.attack($player2)
+    Game.new.attack(@player2)
     erb :attack
   end
 
