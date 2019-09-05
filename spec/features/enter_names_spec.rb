@@ -21,4 +21,11 @@ require_relative "web_helpers"
       click_link 'Attack!'
       expect(page). to have_content 'Bob attacks Marley!'
     end
+
+    # feature 'HitPoints' do
+    #   scenario 'Player has full points when starts' do
+    #     sign_in_and_play
+    #     expect()
+    #   end
+    # end
   end
