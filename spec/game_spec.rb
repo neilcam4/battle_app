@@ -1,4 +1,5 @@
 require 'game'
+require 'player'
 
 describe Game do
 
@@ -22,6 +23,18 @@ describe Game do
     it "damages the other player" do
       expect(player_2).to receive (:reduce_health)
       game.attack(player_2)
+    end
+  end
+
+  describe '#switch' do
+    it "tests that player switches turn after button pushed" do
+      # game.switch_turn
+      a = Game.new("Susan", "Dave")
+      a.switch_turn
+      p "Game = #{a}"
+      p "PLayers = #{a.players}"
+      p "Attacker = #{a.attacker}"
+      expect(a.attacker).to eq "Dave"
     end
   end
 

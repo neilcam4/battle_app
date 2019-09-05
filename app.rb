@@ -1,13 +1,14 @@
 require 'sinatra/base'
-require './lib/game'
-require './lib/player'
-require_relative'./lib/player.rb'
+# require './lib/game'
+# require './lib/player'
+require_relative 'lib/game'
+require_relative 'lib/player'
 
 class Battle < Sinatra::Base
   enable :sessions
 
   get '/' do
-    erb(:index)
+    erb :index
   end
 
   post '/names' do
