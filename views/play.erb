@@ -1,6 +1,7 @@
 <h1> Game on! the players are: </h1>
-<h1> <%= @player_1_name %> vs <%= @player_2_name %>!!</h1>
+<h1> <%= @player1.name %> vs <%= @player2.name %>!!</h1>
 
-<h1> <%= @player_2_name %>: 60HP</h1>
+<h1> <%= @player1.name %>: <%=@player1.hit_points%>HP</h1>
+<h1> <%= @player2.name %>: <%=@player2.hit_points%>HP</h1>
 
 <a href = "/attack">Attack!</a>
