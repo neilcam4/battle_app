@@ -38,13 +38,22 @@ class Battle < Sinatra::Base
   post '/attack' do
     @game = $game
     @game.attack(@game.victim)
-    redirect '/attack'
+    if @game.game_over?
+      redirect '/winner'
+    else
+      redirect '/attack'
+    end
   end
 
   post '/play' do
     @game = $game
     @game.switch_turn
     redirect '/play'
+  end
+
+  get '/winner' do
+    @game = $game
+    erb(:winner)
   end
 
   run! if app_file ==$0
