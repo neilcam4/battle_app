@@ -17,8 +17,8 @@ describe 'Switch turns' do
       fill_in :player_1_name, with: 'Bob'
       fill_in :player_2_name, with: 'Marley'
       click_button 'Submit'
-      click_link 'Attack!'
-      click_link 'OK'
+      click_button 'Attack'
+      click_button 'OK'
       expect(page).not_to have_content "Bob's turn"
       expect(page).to have_content "Marley's turn"
     end

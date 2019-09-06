@@ -1,2 +1,6 @@
-<h1> <%= @game.player_1.name %> attacks <%= @game.player_2.name %>!</h1>
-<a href = "/play">OK</a>
+<h1> <%= @game.attacker.name %> attacks <%= @game.victim.name %>!</h1>
+
+
+<form action = "/play" method ="post">
+<input type="submit" value="OK">
+</form>

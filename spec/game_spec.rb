@@ -37,5 +37,6 @@ describe Game do
       expect(a.attacker).to eq "Dave"
     end
   end
+  
 
 end
